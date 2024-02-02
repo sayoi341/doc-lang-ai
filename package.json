@@ -2,14 +2,18 @@
   "name": "doc-lang-ai",
   "private": true,
   "scripts": {
-    "build": "turbo build",
     "dev": "turbo dev",
+    "build": "turbo build",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "fmt": "turbo fmt",
+    "mobile": "bun run --cwd apps/mobile",
+    "web": "bun run --cwd apps/web",
+    "docs": "bun run --cwd apps/docs",
+    "api": "bun run --cwd apps/api"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@my/eslint-config": "workspace:*",
+    "@my/typescript-config": "workspace:*",
     "prettier": "^3.1.1",
     "turbo": "latest"
   },
