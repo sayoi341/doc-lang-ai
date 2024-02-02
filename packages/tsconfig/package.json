@@ -1,9 +1,19 @@
 {
-  "name": "@my/typescript-config",
-  "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
+  "name": "@my/tsconfig",
+  "files": [
+    "./tsconfig.*.json"
+  ],
+  "scripts": {
+    "lint": "eslint ./**/*.json",
+    "lint:fix": "eslint ./**/*.json --fix",
+    "fmt": "prettier --check .",
+    "fmt:fix": "prettier --write ."
+  },
+  "devDependencies": {
+    "@my/prettier": "workspace:*",
+    "@my/eslint-config-base": "workspace:*",
+    "@tsconfig/next-strictest": "1.0.1",
+    "@tsconfig/node-lts-strictest": "18.12.1",
+    "@tsconfig/strictest": "1.0.2"
   }
 }
