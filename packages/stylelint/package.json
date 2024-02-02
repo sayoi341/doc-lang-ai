@@ -1,18 +1,18 @@
 {
-    "name": "@my/stylelint",
-    "main": "index.js",
-    "scripts": {
-        "lint": "eslint ./**/*.js",
-        "lint:fix": "eslint ./**/*.js --fix",
-        "fmt": "prettier --check .",
-        "fmt:fix": "prettier --write ."
-    },
-    "devDependencies": {
-        "@my/prettier": "workspace:*",
-        "@my/eslint-config-base": "workspace:*",
-        "stylelint-config-prettier": "9.0.5",
-        "stylelint-config-recess-order": "3.1.0",
-        "stylelint-config-standard-scss": "7.0.1",
-        "stylelint-prettier": "2.0.0"
-    }
+  "name": "@my/stylelint",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./**/*.js",
+    "lint:fix": "eslint ./**/*.js --fix",
+    "fmt": "prettier --check .",
+    "fmt:fix": "prettier --write ."
+  },
+  "devDependencies": {
+    "@my/prettier": "workspace:*",
+    "@my/eslint-config-base": "workspace:*",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-recess-order": "3.1.0",
+    "stylelint-config-standard-scss": "7.0.1",
+    "stylelint-prettier": "2.0.0"
+  }
 }

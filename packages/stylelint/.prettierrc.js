@@ -1,4 +1,4 @@
 /** @type {import('prettier').Options} */
 module.exports = {
-    ...require('@my/prettier'),
+  ...require('@my/prettier'),
 };
