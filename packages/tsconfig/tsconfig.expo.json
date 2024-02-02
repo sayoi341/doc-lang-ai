@@ -9,6 +9,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "target": "ESNext"
   },
 
