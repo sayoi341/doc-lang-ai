@@ -1,6 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/eslintrc",
     "extends": [
-        "base"
+        "@my/eslint-config-base"
     ]
 }
