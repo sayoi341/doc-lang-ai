@@ -12,7 +12,7 @@
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
-    "@my/eslint-config": "workspace:*",
+    "@my/eslint-config-nextjs": "workspace:*",
     "@my/typescript-config": "workspace:*",
     "@turbo/gen": "^1.11.3",
     "@types/node": "^20.10.6",

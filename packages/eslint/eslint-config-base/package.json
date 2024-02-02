@@ -1,0 +1,9 @@
+{
+    "name": "@my/eslint-config-base",
+    "version": "0.1.0",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint ./**/*.js",
+        "lint:fix": "eslint ./**/*.js --fix"
+    }
+}
