@@ -1,7 +1,6 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
-function Gradient({
+export const Gradient = ({
   conic,
   className,
   small,
@@ -9,11 +8,12 @@ function Gradient({
   small?: boolean;
   conic?: boolean;
   className?: string;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <div
-      className={`${styles.gradient} ${small ? styles.small : ""} ${conic ? styles.conic : ""
-        } ${className}`}
+      className={`${styles.gradient} ${small ? styles.small : ""} ${
+        conic ? styles.conic : ""
+      } ${className}`}
     />
   );
-}
+};

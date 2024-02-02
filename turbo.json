@@ -5,15 +5,7 @@
   ],
   "pipeline": {
     "fmt": {},
-    "lint": {
-      "dependsOn": [
-        "^lint"
-      ]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
+    "lint": {},
     "build": {
       "dependsOn": [
         "^build"

@@ -4,9 +4,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./app/*"]
     },
     "rootDir": "./",
     "plugins": [
@@ -15,13 +13,6 @@
       }
     ]
   },
-  "include": [
-    "./src/**/*",
-    "./*.js",
-    "./*.ts",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["./app/**/*", "./*.js", "./*.ts", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

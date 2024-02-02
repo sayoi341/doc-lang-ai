@@ -8,8 +8,11 @@
     "fmt": "turbo fmt",
     "mobile": "bun run --cwd apps/mobile",
     "web": "bun run --cwd apps/web",
-    "docs": "bun run --cwd apps/docs",
-    "api": "bun run --cwd apps/api"
+    "api": "bun run --cwd apps/api",
+    "eslint": "bun run --cwd packages/eslint",
+    "prettier": "bun run --cwd packages/prettier",
+    "stylelint": "bun run --cwd packages/stylelint",
+    "tsconfig": "bun run --cwd packages/tsconfig"
   },
   "dependencies": {
     "dotenv": "16.0.3"
