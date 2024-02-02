@@ -1,0 +1,8 @@
+{
+    "name": "@my/prettier",
+    "main": "index.js",
+    "scripts": {
+        "fmt": "prettier --check .",
+        "fmt:fix": "prettier --write ."
+    }
+}
