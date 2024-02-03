@@ -3,7 +3,7 @@ import { Link, Tabs } from 'expo-router';
 import React from 'react';
 import { Pressable } from 'react-native';
 
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import useClientOnlyValue from '@/components/useClientOnlyValue';
 import { useColorScheme } from '@/components/useColorScheme';
 import Colors from '@/constants/Colors';
 
@@ -12,7 +12,7 @@ const TabBarIcon = (props: { name: React.ComponentProps<typeof FontAwesome>['nam
   <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />
 );
 
-export default function TabLayout() {
+const TabLayout = () => {
   const colorScheme = useColorScheme();
 
   return (
@@ -54,4 +54,6 @@ export default function TabLayout() {
       />
     </Tabs>
   );
-}
+};
+
+export default TabLayout;

@@ -3,16 +3,6 @@ import { StyleSheet } from 'react-native';
 import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
 
-export default function TabOneScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
-  );
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -29,3 +19,13 @@ const styles = StyleSheet.create({
     width: '80%',
   },
 });
+
+const TabOneScreen = () => (
+  <View style={styles.container}>
+    <Text style={styles.title}>This page is Tab One</Text>
+    <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+    <EditScreenInfo path="app/(tabs)/index.tsx" />
+  </View>
+);
+
+export default TabOneScreen;
