@@ -88,14 +88,14 @@ module.exports = {
       },
     },
     {
-      files: ["./app/**", "./components/**"],
+      files: ["./src/**"],
       rules: {
         "import/no-default-export": "off",
         "import/prefer-default-export": "error",
       },
     },
     {
-      files: ["./app/**/*.story.*"],
+      files: ["./src/**/*.story.*"],
       rules: {
         "import/no-default-export": "off",
         "import/no-extraneous-dependencies": "off",
