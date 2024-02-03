@@ -1,12 +1,12 @@
 {
-    "name": "@my/eslint-config-nextjs",
-    "version": "0.1.0",
-    "main": "index.js",
-    "scripts": {
-        "lint": "eslint ./**/*.js",
-        "lint:fix": "eslint ./**/*.js --fix"
-    },
-    "devDependencies": {
-        "@my/eslint-config-base": "workspace:*"
-    }
+  "name": "@my/eslint-config-nextjs",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./**/*.js",
+    "lint:fix": "eslint ./**/*.js --fix"
+  },
+  "devDependencies": {
+    "@my/eslint-config-base": "workspace:*"
+  }
 }

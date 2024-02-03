@@ -1,6 +1,4 @@
 {
-    "$schema": "https://json.schemastore.org/eslintrc",
-    "extends": [
-        "./index.js"
-    ]
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": ["./index.js"]
 }
