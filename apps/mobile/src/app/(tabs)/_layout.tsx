@@ -3,9 +3,9 @@ import { Link, Tabs } from 'expo-router';
 import React from 'react';
 import { Pressable } from 'react-native';
 
-import useClientOnlyValue from '@/components/useClientOnlyValue';
-import { useColorScheme } from '@/components/useColorScheme';
-import Colors from '@/constants/Colors';
+import useClientOnlyValue from '@/src/components/useClientOnlyValue';
+import { useColorScheme } from '@/src/components/useColorScheme';
+import Colors from '@/src/constants/Colors';
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 const TabBarIcon = (props: { name: React.ComponentProps<typeof FontAwesome>['name']; color: string }) => (
@@ -24,6 +24,12 @@ const TabLayout = () => {
         headerShown: useClientOnlyValue(false, true),
       }}
     >
+      <Tabs.Screen
+        name="camera"
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="camera" color={color} />,
+        }}
+      />
       <Tabs.Screen
         name="index"
         options={{

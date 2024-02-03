@@ -5,7 +5,7 @@ import ExternalLink from './ExternalLink';
 import MonoText from './StyledText';
 import { Text, View } from './Themed';
 
-import Colors from '@/constants/Colors';
+import Colors from '@/src/constants/Colors';
 
 const styles = StyleSheet.create({
   getStartedContainer: {
