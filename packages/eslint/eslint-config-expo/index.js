@@ -88,7 +88,7 @@ module.exports = {
       },
     },
     {
-      files: ["./app/pages/**"],
+      files: ["./app/**", "./components/**"],
       rules: {
         "import/no-default-export": "off",
         "import/prefer-default-export": "error",
