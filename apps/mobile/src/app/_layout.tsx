@@ -1,30 +1,20 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { AntDesign } from '@expo/vector-icons';
 import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
+import { Tabs, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 
-export { ErrorBoundary } from 'expo-router';
+import TabBarIcon from '@/src/components/TabBarIcon';
 
 SplashScreen.preventAutoHideAsync();
 
-const RootLayoutNav = () => (
-  <ThemeProvider value={DefaultTheme}>
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="(camera)" options={{ headerShown: false }} />
-    </Stack>
-  </ThemeProvider>
-);
-
 const RootLayout = () => {
   const [loaded, error] = useFonts({
-    SpaceMono: require('../../assets/fonts/SpaceMono-Regular.ttf'),
-    ...FontAwesome.font,
+    ...AntDesign.font,
   });
+  const segments = useSegments();
 
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error;
   }, [error]);
@@ -39,7 +29,44 @@ const RootLayout = () => {
     return null;
   }
 
-  return <RootLayoutNav />;
+  // if screen is in the home or live stack, hide the tab bar
+  const hide = segments.includes('camera');
+
+  return (
+    <ThemeProvider value={DefaultTheme}>
+      <Tabs
+        screenOptions={{
+          tabBarActiveTintColor: '#BE123C',
+          headerShown: false,
+          tabBarStyle: {
+            display: hide ? 'none' : 'flex',
+          },
+        }}
+      >
+        <Tabs.Screen
+          name="camera"
+          options={{
+            title: 'camera',
+            tabBarIcon: ({ color }) => <TabBarIcon name="camerao" color={color} />,
+          }}
+        />
+        <Tabs.Screen
+          name="home"
+          options={{
+            title: 'home',
+            tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          }}
+        />
+        <Tabs.Screen
+          name="chat"
+          options={{
+            title: 'chat',
+            tabBarIcon: ({ color }) => <TabBarIcon name="message1" color={color} />,
+          }}
+        />
+      </Tabs>
+    </ThemeProvider>
+  );
 };
 
 export default RootLayout;
