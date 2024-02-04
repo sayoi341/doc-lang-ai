@@ -1,5 +1,5 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "eslint.format.enable": true,
-  "eslint.workingDirectories": ["apps/mobile", "apps/web"]
+  "eslint.workingDirectories": ["apps/mobile", "apps/api"]
 }
