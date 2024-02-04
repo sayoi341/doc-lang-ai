@@ -2,6 +2,7 @@
   "name": "doc-lang-ai",
   "private": true,
   "scripts": {
+    "prepare": "husky",
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
