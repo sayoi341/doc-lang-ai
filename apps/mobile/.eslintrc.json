@@ -1,4 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/eslintrc",
-  "extends": ["@my/eslint-config-expo"]
+  "extends": ["@my/eslint-config-expo"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
