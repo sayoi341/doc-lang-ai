@@ -1,0 +1,5 @@
+coverage
+generated
+node_modules
+.expo
+.turbo
