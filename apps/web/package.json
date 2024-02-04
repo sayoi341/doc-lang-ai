@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@my/eslint-config-nextjs": "workspace:*",
+    "@my/prettier": "workspace:*",
     "@my/tsconfig": "workspace:*",
     "@next/eslint-plugin-next": "^14.0.4",
     "@types/eslint": "^8.56.1",
