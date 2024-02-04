@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": ["@my/eslint-config-library"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
