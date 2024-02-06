@@ -5,6 +5,9 @@ import { z } from 'zod';
 const getChat = {
   method: 'GET',
   path: '/chat',
+  headers: z.object({
+    authorization: z.string(),
+  }),
   responses: {
     200: z.string(),
   },
@@ -13,12 +16,24 @@ const getChat = {
 const postChat = {
   method: 'POST',
   path: '/chat',
+  headers: z.object({
+    Authorization: z.string(),
+  }),
   body: z.object({
     image: z.string().refine(Base64.isValid),
     language: z.string(),
   }),
   responses: {
     200: z.object({
+      id: z.array(z.string()),
+      kwargs: z.object({
+        additional_kwargs: z.object({}),
+        content: z.string(),
+      }),
+      lc: z.number(),
+      type: z.string(),
+    }),
+    401: z.object({
       message: z.string(),
     }),
   },

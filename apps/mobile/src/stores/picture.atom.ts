@@ -1,5 +1,5 @@
 import { atom } from 'jotai';
 
-const PictureAtom = atom<string | null>(null);
+const PictureAtom = atom<string | undefined>(undefined);
 
 export default PictureAtom;

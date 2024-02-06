@@ -3,12 +3,12 @@ import { Stack } from 'expo-router';
 const Layout = () => (
   <Stack
     screenOptions={{
-      headerShown: true,
       headerTitle: '',
-      headerStyle: { backgroundColor: '#000000' },
-      contentStyle: { backgroundColor: '#000000' },
     }}
-  />
+  >
+    <Stack.Screen name="index" options={{ headerShown: true, headerStyle: { backgroundColor: '#000' } }} />
+    <Stack.Screen name="prompt" />
+  </Stack>
 );
 
 export default Layout;

@@ -5,7 +5,7 @@ import { Tabs, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 
-import TabBarIcon from '@/src/components/TabBarIcon';
+import TabBarIcon from '~/components/TabBarIcon';
 
 SplashScreen.preventAutoHideAsync();
 
