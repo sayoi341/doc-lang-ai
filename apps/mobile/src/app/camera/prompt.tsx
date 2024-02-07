@@ -13,10 +13,11 @@ const App = () => {
   const [picture, setPicture] = useAtom(PictureAtom);
   const [isLoading, setIsLoading] = useState(false);
   const [transratedText, setTransratedText] = useState('');
-  const [selectedLanguage, setSelectedLanguage] = useState();
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
 
   const fetch = async (lang: string) => {
     setIsLoading(true);
+    console.log(lang);
     try {
       const res = await fetcher.chat.postChat({
         headers: {
