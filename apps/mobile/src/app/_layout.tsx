@@ -1,7 +1,7 @@
 import { AntDesign } from '@expo/vector-icons';
 import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { Tabs, useSegments } from 'expo-router';
+import { Tabs, usePathname } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 
@@ -13,7 +13,7 @@ const RootLayout = () => {
   const [loaded, error] = useFonts({
     ...AntDesign.font,
   });
-  const segments = useSegments();
+  const path = usePathname();
 
   useEffect(() => {
     if (error) throw error;
@@ -29,8 +29,7 @@ const RootLayout = () => {
     return null;
   }
 
-  // if screen is in the home or live stack, hide the tab bar
-  const hide = segments.includes('camera');
+  const hide = path == '/camera' && path != '/camera/prompt';
 
   return (
     <ThemeProvider value={DefaultTheme}>
@@ -47,6 +46,7 @@ const RootLayout = () => {
           name="camera"
           options={{
             title: 'camera',
+            href: '/camera',
             tabBarIcon: ({ color }) => <TabBarIcon name="camerao" color={color} />,
           }}
         />
@@ -62,6 +62,13 @@ const RootLayout = () => {
           options={{
             title: 'chat',
             tabBarIcon: ({ color }) => <TabBarIcon name="message1" color={color} />,
+          }}
+        />
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: 'index',
+            href: null,
           }}
         />
       </Tabs>
