@@ -4,8 +4,7 @@ import { useFonts } from 'expo-font';
 import { Tabs, usePathname } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-
-import TabBarIcon from '~/components/TabBarIcon';
+import Icon from '~/components/Icon';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -47,21 +46,21 @@ const RootLayout = () => {
           options={{
             title: 'camera',
             href: '/camera',
-            tabBarIcon: ({ color }) => <TabBarIcon name="camerao" color={color} />,
+            tabBarIcon: ({ color }) => <Icon name="camerao" color={color} size={28} />,
           }}
         />
         <Tabs.Screen
           name="home"
           options={{
             title: 'home',
-            tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+            tabBarIcon: ({ color }) => <Icon name="home" color={color} size={28} />,
           }}
         />
         <Tabs.Screen
           name="chat"
           options={{
             title: 'chat',
-            tabBarIcon: ({ color }) => <TabBarIcon name="message1" color={color} />,
+            tabBarIcon: ({ color }) => <Icon name="message1" color={color} size={28} />,
           }}
         />
         <Tabs.Screen
