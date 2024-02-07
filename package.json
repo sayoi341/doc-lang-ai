@@ -10,6 +10,7 @@
     "mobile": "bun run --cwd apps/mobile",
     "web": "bun run --cwd apps/web",
     "api": "bun run --cwd apps/api",
+    "adaptor": "bun run --cwd packages/adaptor",
     "eslint": "bun run --cwd packages/eslint",
     "prettier": "bun run --cwd packages/prettier",
     "stylelint": "bun run --cwd packages/stylelint",
