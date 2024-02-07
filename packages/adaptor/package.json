@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "rm -rf ./dist && tspc -d --preserveWatchOutput -w",
     "build": "rm -rf ./dist && tspc -d",
-    "fmt": "prettier --check ./**/*.ts",
-    "fmt:fix": "prettier --write ./**/*.ts",
-    "lint": "eslint ./**/*.ts",
-    "lint-fix": "eslint --fix ./**/*.ts"
+    "fmt": "prettier --check ./src/**/*.ts",
+    "fmt:fix": "prettier --write ./src/**/*.ts",
+    "lint": "eslint ./src/**/*.ts",
+    "lint:fix": "eslint --fix ./src/**/*.ts"
   },
   "dependencies": {
     "@ts-rest/core": "^3.30.5",
