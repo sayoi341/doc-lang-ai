@@ -73,18 +73,28 @@ const App = () => {
   }
 
   return (
-    <View className="flex-1 items-center justify-center">
-      <Text className="font-medium">翻訳結果</Text>
+    <View className="flex flex-col p-9 items-center justify-between h-5/6">
+      <Text className="text-4xl font-bold">翻訳結果</Text>
+      <Text className="text-base">{transratedText}</Text>
 
-      <Text className="font-medium">{transratedText}</Text>
-      <TouchableOpacity
-        className=" bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        onPress={() => {
-          router.push('/home/');
-        }}
-      >
-        <Text className="text-white font-medium">戻る</Text>
-      </TouchableOpacity>
+      <View className="flex flex-row gap-5 justify-between m-5">
+        <TouchableOpacity
+          className=" w-32 items-center bg-white rounded-lg px-5 py-2.5 me-2 mb-2"
+          onPress={() => {
+            fetch(selectedLanguage!);
+          }}
+        >
+          <Text className="text-blue-700 font-medium">再翻訳</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className=" w-32 items-center bg-blue-700 rounded-lg px-5 py-2.5 me-2 mb-2"
+          onPress={() => {
+            router.push('/home/');
+          }}
+        >
+          <Text className="text-white font-medium">戻る</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
